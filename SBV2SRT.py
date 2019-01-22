@@ -1,7 +1,7 @@
 count = 0
 is_newtimeline = True
 out = open('out.srt', 'w', encoding='utf-8')
-with open('captions (2).sbv', 'r', encoding='utf-8') as f:
+with open('captions(1).sbv', 'r', encoding='utf-8') as f:
     for line in f:
         line = line.strip()
         if len(line) == 0:
@@ -15,7 +15,7 @@ with open('captions (2).sbv', 'r', encoding='utf-8') as f:
                 out.write(str(count) + '\n')
                 start, end = line.split(',')
                 start = start.replace('.', ',')
-                end = start.replace('.', ',')
+                end = end.replace('.', ',')
                 print("%s --> %s" % (start, end))
                 out.write("%s --> %s\n" % (start, end))
         else:
